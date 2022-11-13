@@ -1,0 +1,99 @@
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+
+\moderncvstyle{classic}
+\moderncvcolor{purple}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+%\setlength{\footskip}{81.60002pt}                 % depending on the amount of information in the footer, you need to change this value. comment this line out and set it to the size given in the warning
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvheadnamewidth}{10cm}            % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+\newcommand\Colorhref[3][blue]{\href{#2}{\small\color{#1}#3}}
+
+\ifxetexorluatex
+  \usepackage{fontspec}
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Ligatures=TeX}
+  \setmainfont{Latin Modern Roman}
+  \setsansfont{Latin Modern Sans}
+  \setmonofont{Latin Modern Mono}
+  \setmathfont{Latin Modern Math} 
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage{lmodern}
+\fi
+
+% document language
+\usepackage[english]{babel}
+
+% personal data
+\name{Vandad}{Delavari}
+\title{Software Developer}
+\born{19 January 2003}
+\address{Tehran}{Iran}{}
+\phone[mobile]{+98~991~209~9519}
+\phone[fixed]{+98~21~8821~3298}
+\email{vandad1901@gmail.com}
+%\homepage{www.bingus.ir}
+
+\social[linkedin]{vandad-delavari}
+\social[github]{vandad1901}
+\social[telegram]{vandad1901}
+\social[whatsapp]{+989912099519}
+
+%\extrainfo{additional information}
+%\photo[128pt][2pt]{sticker}
+\quote{Programming is a skill best acquired by practice and example rather than from books - \emph{Alan Turing}}
+
+\begin{document}
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+\section{Education}
+\cventry{2020--2021}{Diploma}{Helli 4}{Tehran}{}{}  % arguments 3 to 6 can be left empty
+\cventry{2021--present}{Bachelor of Science}{Amirkabir University of Technology}{Tehran}{}{Currently pursuing a Bachelor's degree in Computer Science}
+
+\section{Skills}
+
+\subsection{Technical skills}
+\cvskilllegend*{Legend}
+\setcvskilllegendcolumns[][0.6]
+
+\cvskillhead[-0.1em]
+
+\cvskillentry*{Language:}{5}{Python}{7}{Have created several hobby projects using different frameworks and libraries}
+\cvskillentry{}{4}{C/C++}{4}{Utilized in programming contests and several high performance projects}
+\cvskillentry{}{2}{C\#}{1}{Used in Unity game making}
+\cvskillentry{}{2}{JavaScript}{2}{Syntactic knowledge and minimal experience with various JS frameworks such as Three.js}
+\cvskillentry{}{2}{PostgreSQL}{2}{Deployed a minimal database}
+\cvskillentry{}{2}{\LaTeX}{1}{Made basic documents including this résumé using \LaTeX}
+\cvskillentry{}{1}{Go}{1}{Basic syntactic knowledge}
+
+\cvskillentry*{Tools}{5}{VS Code}{3}{Used as main development environment for all languages}
+\cvskillentry{}{3}{Git}{3}{Git projects can be found in the GitHub page provided above}
+
+\cvskillentry*{OS:}{5}{Windows}{12}{Used as main Operating System}
+\cvskillentry{}{3}{Linux}{4}{Used several Debian based distros but mainly specialize in WSL}
+
+\subsection{Non-technical skills}
+\cvlistdoubleitem{Mathematically inclined}{Fast learner}
+\cvlistdoubleitem{Problem solver}{Good communicator}
+
+\section{Interests}
+\cvlistdoubleitem{Machine learning}{Competitive programming}
+\cvlistitem{Mathematics} 
+
+\section{Certificates}
+\cvlistitem{Coursera certificate for the completion of a course in \Colorhref{https://coursera.org/share/27d89eb335a3a569c0a63c167d3ef937}{Neural Networks and Deep Learning}}
+\cvlistitem{Sololearn certificates for the completion of courses in \Colorhref{https://www.sololearn.com/certificates/CT-HIFQI1PB}{Python}, \Colorhref{https://www.sololearn.com/certificates/CT-IRSSQTNA}{C}, \Colorhref{https://www.sololearn.com/certificates/CT-HSVWFQ9G}{C++} and \Colorhref{https://www.sololearn.com/certificates/CT-2XORJOYP}{Go}}
+
+\section{Languages}
+\cvitemwithcomment{English}{Professional working proficiency}{}
+\cvitemwithcomment{Persian}{Native language}{}
+\cvitemwithcomment{Arabic}{High school level proficiency}{}
+
+\end{document}
