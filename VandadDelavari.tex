@@ -1,15 +1,16 @@
 \documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
 
-\moderncvstyle{classic}
+
 \moderncvcolor{purple}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+\moderncvstyle{classic}
 %\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
 \nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
 
 % adjust the page margins
-\usepackage[scale=0.75]{geometry}
+\usepackage[scale=0.86]{geometry}
 %\setlength{\footskip}{81.60002pt}                 % depending on the amount of information in the footer, you need to change this value. comment this line out and set it to the size given in the warning
-%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+\setlength{\hintscolumnwidth}{2.3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvheadnamewidth}{10cm}            % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
 \newcommand\Colorhref[3][blue]{\href{#2}{\small\color{#1}#3}}
@@ -27,80 +28,65 @@
   \usepackage{lmodern}
 \fi
 
-% document language
 \usepackage[english]{babel}
 
 % personal data
 \name{Vandad}{Delavari}
-\title{Software Developer}
-\born{19 January 2003}
-%\address{505 Cummer Ave.}{Ontario, Canada}{}
-\phone[mobile]{+98~(991)~209~9519}
+\title{Full-Stack Software Engineer (Go, Angular, Distributed Systems)}
+\phone[mobile]{+1~(647)~612-7320}
 \email{vandad1901@gmail.com}
-%\homepage{www.bingus.ir}
 
 \social[linkedin]{vandad-delavari}
 \social[github]{vandad1901}
-\social[telegram]{vandad1901}
-\social[whatsapp]{+989912099519}
 
-%\extrainfo{additional information}
-%\photo[128pt][2pt]{sticker}
-\quote{Programming is a skill best acquired by practice and example rather than from books - \emph{Alan Turing}}
 
 \begin{document}
-%-----       resume       ---------------------------------------------------------
 \makecvtitle
 
+\section{Profile}
+Full-stack software engineer with experience building enterprise applications using Go and Angular. Strong focus on backend systems, database design, and scalable services.
+
+
 \section{Education}
-\cventry{2020--2021}{Diploma}{Helli 4}{Tehran}{}{}  % arguments 3 to 6 can be left empty
-\cventry{2021--present}{Bachelor of Science}{Amirkabir University of Technology}{Tehran}{}{Currently pursuing a Bachelor's degree in Computer Science}
-
-\section{Skills}
-
-\subsection{Technical skills}
-\cvskilllegend*{Legend}
-\setcvskilllegendcolumns[][0.6]
-
-\cvskillhead[-0.1em]
-
-\cvskillentry*{Language:}{5}{Python}{9}{Have created several hobby projects using different frameworks and libraries and have vast knowledge of the language itself as well}
-\cvskillentry{}{4}{C/C++}{6}{Utilized in programming contests and several high performance projects}
-\cvskillentry{}{2}{C\#}{1}{Used in Unity game making}
-\cvskillentry{}{4}{\LaTeX}{2}{Have used \LaTeX as the main means of producing academic and professional documents}
-\cvskillentry{}{2}{JavaScript}{4}{Extensive use in multiple websites, both front-end and back-end development}
-
-\cvskillentry*{Frameworks}{5}{Pyrogram}{5}{Developed multiple bots that helped solve real world problems like assisting in university course registration}
-\cvskillentry{}{4}{Next.js}{1}{Developed multiple websites, with varying levels of real-world use}
-\cvskillentry{}{5}{Tailwind CSS}{1}{used in all front-end projects, with special focus on accesbility and UI/UX principles}
-\cvskillentry{}{2}{Django}{1}{fundamental knowledge, used in basic back-end processing}
-
-\cvskillentry*{Database}{4}{MongoDB}{1}{intermediate familiarity and used in several hobby projects}
-\cvskillentry{}{3}{PostgreSQL}{3}{Deployed and maintained a database for hobby and professional projects}
+\cventry{2021--2026}{B.Sc. Computer Science}{Amirkabir University of Technology}{Tehran}{GPA: 3.59}{}
 
 
-\cvskillentry*{Tools}{4}{GIT}{4}{GIT projects can be found in the GitHub page provided above}
-\cvskillentry{}{3}{Docker}{1}{Moderate familiarity with Docker development and deployment}
+\section{Work Experience}
+\cventry{2025--2026}{Full-Stack Developer}{System Group (Enterprise Software Company)}{Tehran}{}{
+	\begin{itemize}
+		\item Core contributor to an HCM module, owning end-to-end feature delivery from requirements to deployment within a 15-person team
+		\item Optimized PostgreSQL schema and queries across core entities, supporting \textasciitilde50 client organizations during closed beta
+		\item Designed and implemented backend services in Go by translating complex HR and business requirements into structured domain models and scalable application logic
+		\item Contributed to architectural decisions on service boundaries, data modeling, and API design in large-scale enterprise system
+		\item Introduced behavior-driven development (BDD) practices using Gherkin, helping standardize testing workflows and improve code reliability across the team
+		\item Contributed to Angular front-end development, supporting stable alpha releases with low defect rates
+	\end{itemize}
+}
 
-\subsection{Non-technical skills}
-\cvlistdoubleitem{Mathematically inclined}{Fast learner}
-\cvlistdoubleitem{Problem solver}{Good communicator}
-\cvlistitem{analytical mind}
 
-\section{Interests}
-\cvlistdoubleitem{Machine learning}{Competitive programming}
-\cvlistitem{Mathematics} 
+\section{Technical Skills}
+\textbf{Languages:} Go, Python, TypeScript, C/C++ \\
+\textbf{Frameworks:} Angular, Next.js, Django \\
+\textbf{Databases:} PostgreSQL, MongoDB \\
+\textbf{Tools:} Docker, Git \\
+\textbf{Concepts:} REST APIs, Distributed Systems, System Design, Database Optimization
 
-\section{Certificates}
-\cvlistitem{Coursera certificate for the completion of a course in \Colorhref{https://coursera.org/share/27d89eb335a3a569c0a63c167d3ef937}{Neural Networks and Deep Learning}}
-\cvlistitem{Sololearn certificates for the completion of courses in \Colorhref{https://www.sololearn.com/certificates/CT-HIFQI1PB}{Python}, \Colorhref{https://www.sololearn.com/certificates/CT-IRSSQTNA}{C}, \Colorhref{https://www.sololearn.com/certificates/CT-HSVWFQ9G}{C++} and \Colorhref{https://www.sololearn.com/certificates/CT-2XORJOYP}{Go}}
 
 \section{Projects}
-\subsection{P2P Chat App}{A chat app written with pyqt that uses network fundamentals to facilitate a peer-to-peer connection. Peer discovery is done with a central STUN server that uses Redis in the background. \Colorhref{https://github.com/vandad1901/P2P-chat}{Github}}{}
-\subsection{Aknoon Gallery website}{A mock-up of a website done with Next.js and tailwind that showcases a gallery, and has a store section. \Colorhref{https://github.com/vandad1901/aknoon-gallery}{Github}}, \Colorhref{https://aknoongallery.com/}{Demo}{}
-\subsection{Primal to Dual Converter}{A website built using next.js and tailwind to demonstrate the process of converting a linear optimization problem to its dual and back. \Colorhref{https://github.com/vandad1901/primal-to-dual}{Github}}, \Colorhref{https://cool.vandaddelavari.ir/}{Demo}{}
+\subsection{P2P Chat Application (Python, PyQt, Redis, STUN)}
+Peer-to-peer chat application using NAT traversal for direct client communication. \\
+Implemented peer discovery with Redis and STUN-based connection setup. \Colorhref{https://github.com/vandad1901/P2P-chat}{GitHub}
+
+\subsection{Aknoon Gallery Website (Next.js, TypeScript, Tailwind CSS)}
+Full-stack gallery and e-commerce web application with responsive and accessible UI. \\
+Built dynamic frontend with component-based architecture. \Colorhref{https://github.com/vandad1901/aknoon-gallery}{GitHub}, \Colorhref{https://aknoongallery.com/}{Demo}
+
+\subsection{Primal-Dual Converter (Next.js, TypeScript, Tailwind CSS)}
+Web app for transforming linear programs into dual form. \\
+Implemented LP-to-dual transformation logic. \Colorhref{https://github.com/vandad1901/primal-to-dual}{GitHub}, \Colorhref{https://cool.vandaddelavari.ir/}{Demo}
+
+
 \section{Languages}
-\cvitemwithcomment{English}{Professional working proficiency}{}
-\cvitemwithcomment{Persian}{Native language}{}
+\cvdoubleitem{English}{Fluent}{Persian}{Native}
 
 \end{document}
