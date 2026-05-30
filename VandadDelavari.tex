@@ -1,92 +1,116 @@
-\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\documentclass[11pt]{article}       % set main text size
+\usepackage[letterpaper,            % set paper size to letterpaper. change to a4paper for resumes outside of North America
+top=0.45in,                          % specify top page margin
+bottom=0.5in,                       % specify bottom page margin
+left=0.5in,                         % specify left page margin
+right=0.5in]{geometry}              % specify right page margin
+                       
+\usepackage{XCharter}               % set font. comment this line out if you want to use the default LaTeX font Computer Modern
+\usepackage[T1]{fontenc}            % output encoding
+\usepackage[utf8]{inputenc}         % input encoding
+\usepackage{enumitem}               % enable lists for bullet points: itemize and \item
+\usepackage[hidelinks]{hyperref}    % format hyperlinks
+\usepackage{titlesec}               % enable section title customization
+\raggedright                        % disable text justification
+\pagestyle{empty}                   % disable page numbering
+
+% ensure PDF output will be all-Unicode and machine-readable
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+% format section headings: bolding, size, white space above and below
+\titleformat{\section}{\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule\vspace{-6.5pt}]
+
+% format bullet points: size, white space above and below, white space between bullets
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+\setlist[itemize]{itemsep=-2pt, leftmargin=12pt, topsep=7pt} %%% Test various topsep values to fix vertical spacing errors
 
 
 
-\moderncvcolor{purple}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
-\moderncvstyle{classic}
-%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
-\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
-
-% adjust the page margins
-\usepackage[scale=0.86]{geometry}
-%\setlength{\footskip}{81.60002pt}                 % depending on the amount of information in the footer, you need to change this value. comment this line out and set it to the size given in the warning
-\setlength{\hintscolumnwidth}{3.2cm}                % if you want to change the width of the column with the dates
-%\setlength{\makecvheadnamewidth}{10cm}            % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
-
-\newcommand\Colorhref[3][blue]{\href{#2}{\small\color{#1}#3}}
-
-\ifxetexorluatex
-  \usepackage{fontspec}
-  \usepackage{unicode-math}
-  \defaultfontfeatures{Ligatures=TeX}
-  \setmainfont{Latin Modern Roman}
-  \setsansfont{Latin Modern Sans}
-  \setmonofont{Latin Modern Mono}
-  \setmathfont{Latin Modern Math} 
-\else
-  \usepackage[T1]{fontenc}
-  \usepackage{lmodern}
-\fi
-
-\usepackage[english]{babel}
-
-% personal data
-\name{Vandad}{Delavari}
-\title{Full-Stack Software Engineer (Go, Angular, Distributed Systems)}
-\phone[mobile]{+1~(647)~612-7320}
-\email{vandad1901@gmail.com}
-
-\social[linkedin]{vandad-delavari}
-\social[github]{vandad1901}
 
 
+
+
+% resume starts here
 \begin{document}
-\makecvtitle
 
-\section{Profile}
-Full-stack software engineer with experience building enterprise applications using Go and Angular. Strong focus on backend systems, database design, and scalable services.
+% name
+\centerline{\Huge Vandad Delavari}
+
+\vspace{5pt}
+
+% contact information
+\centerline{Canadian Permanent Resident | \href{mailto:vandad1901@gmail.com}{vandad1901@gmail.com} | \href{https://github.com/vandad1901}{github.com/vandad1901}}
+
+\vspace{-10pt}
+
+\section*{Profile}
+Backend Engineer specializing in distributed systems, gRPC services, and enterprise-grade Go backend systems
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% skills section %%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Skills}
+\textbf{Languages:} Go, Python, TypeScript, C/C++, SQL, HTML, CSS \\
+\textbf{Frontend:} Angular, React, Next.js, Tailwind CSS \\
+\textbf{Backend:} Go, Django, REST APIs, gRPC \\
+\textbf{Databases:} PostgreSQL, MongoDB, Redis \\
+\textbf{Tools \& Platforms:} Git, Docker, Linux, CI/CD, Node.js \\
+\textbf{Testing:} Integration Testing, BDD, Gherkin, Godog \\
+\textbf{Concepts:} Distributed Systems, System Design, Database Design, API Design, Software Architecture
+\vspace{-6.5pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% experience section %%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Experience}
+\textbf{AI Data Annotator,} {DataAnnotation} -- Remote \hfill Apr 2026 -- Present \\
+\vspace{-9pt}
+\begin{itemize}
+\item Evaluated and ranked AI model outputs across diverse tasks, assessing correctness, reasoning quality, and instruction adherence
+\item Performed error analysis and fact-checking to identify hallucinations, logical inconsistencies, and code failures
+\item Reviewed code generation tasks, providing structured feedback used in LLM training and evaluation pipelines
+\end{itemize}
+
+\textbf{Full-Stack Developer,} {System Group (Enterprise Software Company)} -- Tehran, IR \hfill Jan 2025 -- Mar 2026 \\
+\vspace{-9pt}
+\begin{itemize}
+    \item Delivered 10+ production modules for a greenfield enterprise software suite serving large organizations across HCM, financial, and operational domains
+    \item Designed gRPC service boundaries, protobuf contracts, and backend services in Go, translating HR and payroll requirements into scalable domain models
+    \item Developed core HCM systems including staff management workflows, payroll calculation engines, and accounting ledger-entry generation used in production
+    \item Designed relational database schemas and optimized PostgreSQL queries to support evolving enterprise data and usage patterns
+    \item Led frontend development of 8+ Angular features, building complex form-driven workflows and reusable UI components
+    \item Established a behavior-driven testing framework using Gherkin and Godog, later adopted across multiple teams, and built internal tooling including a DBF validation utility for legacy integrations
+\end{itemize}
+
+\vspace{-18.5pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%% projects section %%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Projects}
+
+\textbf{Aknoon Gallery Website} \hfill \href{https://github.com/vandad1901/aknoon-gallery}{GitHub}, \href{https://aknoon.vandaddelavari.ir/}{Demo} \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Full-stack Next.js/TypeScript app with authentication, admin dashboard, and multi-criteria search (filters, ranges, hierarchical categories)
+  \item Designed reusable frontend architecture for scalable, maintainable component-based UI
+\end{itemize}
+
+\vspace{4pt}
+
+\textbf{P2P Chat Application} \hfill \href{https://github.com/vandad1901/P2P-chat}{GitHub} \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Peer-to-peer chat system in Python/PyQt with direct client-to-client messaging (no central server)
+  \item Redis-based peer discovery with STUN NAT traversal for connection establishment
+\end{itemize}
 
 
-\section{Education}
-\cventry{2021--2026}{B.Sc. Computer Science}{Amirkabir University of Technology}{Tehran}{GPA: 3.59}{}
+\vspace{-18.5pt}
 
-
-\section{Work Experience}
-\cventry{Jan 2025\\ Mar 2026}{Full-Stack Developer}{System Group (Enterprise Software Company)}{Tehran}{}{
-	\begin{itemize}
-		\item Core contributor to an HCM module, owning end-to-end feature delivery from requirements to deployment within a 15-person team
-		\item Optimized PostgreSQL schema and queries across core entities, supporting \textasciitilde50 client organizations during closed beta
-		\item Designed and implemented backend services in Go by translating complex HR and business requirements into structured domain models and scalable application logic
-		\item Contributed to architectural decisions on service boundaries, data modeling, and API design in large-scale enterprise system
-		\item Introduced behavior-driven development (BDD) practices using Gherkin, helping standardize testing workflows and improve code reliability across the team
-		\item Contributed to Angular front-end development, supporting stable alpha releases with low defect rates
-	\end{itemize}
-}
-
-
-\section{Technical Skills}
-\textbf{Languages:} Go, Python, TypeScript, C/C++ \\
-\textbf{Frameworks:} Angular, Next.js, Django \\
-\textbf{Databases:} PostgreSQL, MongoDB \\
-\textbf{Tools:} Docker, Git \\
-\textbf{Concepts:} REST APIs, Distributed Systems, System Design, Database Optimization
-
-
-\section{Projects}
-\subsection{P2P Chat Application (Python, PyQt, Redis, STUN)}
-Peer-to-peer chat application using NAT traversal for direct client communication. \\
-Implemented peer discovery with Redis and STUN-based connection setup. \Colorhref{https://github.com/vandad1901/P2P-chat}{GitHub}
-
-\subsection{Aknoon Gallery Website (Next.js, TypeScript, Tailwind CSS)}
-Full-stack gallery and e-commerce web application with responsive and accessible UI. \\
-Built dynamic frontend with component-based architecture. \Colorhref{https://github.com/vandad1901/aknoon-gallery}{GitHub}, \Colorhref{https://aknoongallery.com/}{Demo}
-
-\subsection{Primal-Dual Converter (Next.js, TypeScript, Tailwind CSS)}
-Web app for transforming linear programs into dual form. \\
-Implemented LP-to-dual transformation logic. \Colorhref{https://github.com/vandad1901/primal-to-dual}{GitHub}, \Colorhref{https://cool.vandaddelavari.ir/}{Demo}
-
-
-\section{Languages}
-\cvdoubleitem{English}{Fluent}{Persian}{Native}
+% education section
+\section*{Education}
+\textbf{Amirkabir University of Technology} -- Bachelor of Computer Science \hfill Jun 2026 \\
+National University Entrance Exam (Konkur): Ranked 251 nationally
 
 \end{document}
